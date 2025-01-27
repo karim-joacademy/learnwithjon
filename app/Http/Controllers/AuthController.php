@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
@@ -32,7 +33,7 @@ class AuthController extends Controller
         ]);
 
         if(Auth::attempt($fields)) {
-            return redirect()->intended();
+            return redirect()->intended('dashboard');
         } else {
             return back()->withErrors([
                 'failed' => 'Email or password is not correct',
@@ -48,4 +49,6 @@ class AuthController extends Controller
 
         return redirect()->route("home");
     }
+
+
 }

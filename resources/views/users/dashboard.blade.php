@@ -1,3 +1,3 @@
 <x-layout>
-    <h1>Hello {{ auth()->user()->username }}</h1>
+    <h1 class="title">Hello {{ auth()->user()->name }}</h1>
 </x-layout>

@@ -24,7 +24,7 @@
             <nav>
                 <a href="{{ route('home') }}" class="nav-link">Home</a>
                 <div class="flex items-center gap-4">
-                    <a href="{{ route('posts') }}" class="nav-link">Posts</a>
+                    <a href="{{ route('posts.index') }}" class="nav-link">Posts</a>
                     <a href="{{ route('dashboard') }}" class="nav-link">Dashboard</a>
                     <form action="{{ route('logout') }}" method="post">
                         @csrf

@@ -1,5 +1,5 @@
 <x-layout>
-    <h1>Posts</h1>
+    <h1 class="title">Posts</h1>
 
     <ul>
         <li>Post-1</li>
